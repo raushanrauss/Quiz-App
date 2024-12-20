@@ -1,16 +1,24 @@
 import { View, Text, Pressable, Image } from "react-native";
 import React from "react";
 import { useRoute } from "@react-navigation/native";
+import { RouteProp } from "@react-navigation/native";
+
+type RootStackParamList = {
+  Splash: undefined;
+  Question: undefined;
+  Score: { score: number };
+};
 
 export default function Score({ navigation }) {
-  const router = useRoute();
-  const { score } = router.params;
+  const route = useRoute<RouteProp<RootStackParamList, "Score">>();
+
+  const { score } = route.params;
 
   return (
     <View style={{ flex: 1, alignItems: "center" }}>
       <Image source={require("../../assets/images/logo.jpeg")} style={{}} />
       <Text style={{ fontSize: 20 }}>
-        Congratulation!! Your Scored {score} points
+        Congratulation!! You Scored {score} points
       </Text>
       <Pressable
         onPress={() => navigation.navigate("Splash")}
