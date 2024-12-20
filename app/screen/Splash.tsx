@@ -13,7 +13,7 @@ export default function Splash({ navigation }) {
       </Text>
       <View
         style={{
-          backgroundColor: "purple",
+          backgroundColor: "#9f7aea",
           padding: 10,
           borderRadius: 10,
           height: 120,
@@ -34,7 +34,7 @@ export default function Splash({ navigation }) {
       </View>
       <Pressable
         style={{
-          backgroundColor: "purple",
+          backgroundColor: "#9f7aea",
           marginTop: 40,
           paddingHorizontal: 24,
           paddingVertical: 10,

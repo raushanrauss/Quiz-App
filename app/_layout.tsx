@@ -9,7 +9,7 @@ export default function RootLayout() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerStyle: { backgroundColor: "purple" },
+        headerStyle: { backgroundColor: "white" },
       }}
     >
       <Stack.Screen name='Splash' component={Splash} />

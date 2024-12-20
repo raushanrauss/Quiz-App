@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, Alert } from "react-native";
 import * as Progress from "react-native-progress";
 import { reactQuestion } from "../config/question";
 
@@ -12,6 +12,10 @@ export default function Question({ navigation }) {
   const handleNext = () => {
     if (currentQuestion === reactQuestion.length - 1) {
       navigation.navigate("Score", { score });
+      return;
+    }
+    if (selectedOption === null) {
+      Alert.alert("Please select one option");
       return;
     }
     setIsCorrect(null);
@@ -34,13 +38,15 @@ export default function Question({ navigation }) {
 
   return (
     <View style={{ marginTop: 24, padding: 16 }}>
-      <View style={{ marginBottom: 16, width: 100 }}>
-        <Progress.Bar
-          progress={progress}
-          width={380}
-          color='purple'
-          height={20}
-        />
+      <View style={{ flexDirection: "row" }}>
+        <View style={{ flex: 1 }}>
+          <Progress.Bar
+            progress={progress}
+            width={null}
+            color='#9f7aea'
+            height={20}
+          />
+        </View>
       </View>
 
       <Text style={{ fontSize: 40, marginBottom: 16 }}>
@@ -51,14 +57,15 @@ export default function Question({ navigation }) {
         <Pressable
           style={{
             padding: 8,
-            marginVertical: 2,
-            borderRadius: 2,
+            marginVertical: 4,
+            borderRadius: 10,
             borderWidth: 2,
+            borderColor: "#9f7aea",
             backgroundColor:
               option === selectedOption
                 ? iscorrect
-                  ? "green"
-                  : "red"
+                  ? "#c6f6d5"
+                  : "#fed7d7"
                 : "white",
           }}
           key={index}
@@ -69,10 +76,9 @@ export default function Question({ navigation }) {
         </Pressable>
       ))}
 
-      {/* Next/Finish button */}
       <Pressable
         style={{
-          backgroundColor: "purple",
+          backgroundColor: "#9f7aea",
           padding: 8,
           borderRadius: 10,
           marginTop: 24,

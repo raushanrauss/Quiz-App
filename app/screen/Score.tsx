@@ -15,7 +15,7 @@ export default function Score({ navigation }) {
       <Pressable
         onPress={() => navigation.navigate("Splash")}
         style={{
-          backgroundColor: "purple",
+          backgroundColor: "#9f7aea",
           padding: 8,
           borderRadius: 4,
           marginTop: 8,
