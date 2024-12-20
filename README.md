@@ -2,7 +2,6 @@
 
 # Features
 - Multiple-choice questions
-- Timer for each question (if required)
 - User-friendly interface
 - Score tracking
 - Responsive design for both iOS and Android devices
@@ -19,7 +18,7 @@
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/quiz-app.git
+   git clone https://github.com/raushanrauss/Quiz-App.git
    ```
 
 2. Navigate into the project directory:
