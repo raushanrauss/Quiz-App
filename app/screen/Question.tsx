@@ -56,7 +56,7 @@ export default function Question({ navigation }) {
       {reactQuestion[currentQuestion].Option.map((option, index) => (
         <Pressable
           style={{
-            padding: 8,
+            padding: 14,
             marginVertical: 4,
             borderRadius: 10,
             borderWidth: 2,
