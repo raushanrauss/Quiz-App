@@ -49,7 +49,7 @@ export default function Question({ navigation }) {
         </View>
       </View>
 
-      <Text style={{ fontSize: 40, marginBottom: 16 }}>
+      <Text style={{ fontSize: 30, marginBottom: 16 }}>
         {reactQuestion[currentQuestion].question}
       </Text>
 
